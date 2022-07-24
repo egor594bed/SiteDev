@@ -1,0 +1,44 @@
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.none {
+  display: none;
+}
+
+.container {
+  padding: 0 calc(20px + 324 * (100vw - 1200px) / 720);
+}
+
+/* HEADER
+========================================================================================*/
+.test {
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  background-color: blue;
+}
