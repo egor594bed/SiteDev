@@ -675,7 +675,7 @@ $window-width-min-px: $window-width-min + px;
 }
 
 .quality-slider__sub-slider {
-    width: 1440px;
+    width: 1420px;
     margin-bottom: 20px;
     display: flex;
     position: relative;
@@ -683,7 +683,7 @@ $window-width-min-px: $window-width-min + px;
 
     &::after {
         content: "";
-        width: 1440px    ;
+        width: 1420px    ;
         border: 2px solid #5F5F5F;
         border-radius: 3px;
         display: block;
@@ -691,21 +691,21 @@ $window-width-min-px: $window-width-min + px;
         top: 50%;
     }
 
-    &::before {
-        content: "";
-        width: 144px;
-        border: 2px solid #DF4646;
-        position: absolute;
-        top: 50%;
-        left: 0;   
-        z-index: 5;
-
-        transition: position .3s;
-    }
 }
  
+.quality-slider__sub-slider-worm {
+    width: 142px;
+    border: 2px solid #DF4646;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 5;
+    transition: left .2s;
+}
+
 .quality-slider__sub-slide {
-    width: 144px;
+    width: 142px;
 
     &.quality-slider__sub-slide--active .quality-slider__sub-slide-text {
         font-weight: 500;
@@ -746,6 +746,8 @@ $window-width-min-px: $window-width-min + px;
 }
 
 .quality-slider__slider-img {
+    margin-right: 20px;
+    transition: opacity .3s;
 
 }
 
@@ -768,6 +770,7 @@ $window-width-min-px: $window-width-min + px;
     background-color: rgba(223, 70, 70, 0.2);
     border-radius: 5px;
     display: inline-block;
+    transition: opacity .3s;
 }
 
 .quality-slider__slider-right-title {
@@ -778,9 +781,11 @@ $window-width-min-px: $window-width-min + px;
     font-size: 24px;
     line-height: 120%;
     color: #FFFFFF;
+    transition: opacity .3s;
 }
 
 .quality-slider__slider-right-text {
+    min-height: 116px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
@@ -788,11 +793,14 @@ $window-width-min-px: $window-width-min + px;
     line-height: 160%;
     color: #FFFFFF;
     opacity: 0.8;
+    transition: opacity .3s;
 }
 
 .quality-slider__slider-nav {
+    width: 200px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .quality-slider__slider-button {
