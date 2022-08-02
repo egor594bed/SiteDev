@@ -26,10 +26,10 @@
         </div>
     </div>
     <nav class="header__nav">
-        <a class="header__link" href="#">О нас</a>
-        <a class="header__link" href="#">Гарантии</a>
-        <a class="header__link" href="#">Преимущества</a>
-        <a class="header__link" href="#">Контакты</a>
+        <a class="header__link" href="#quality">О нас</a>
+        <a class="header__link" href="#guarantee">Гарантии</a>
+        <a class="header__link" href="#quality-slider">Преимущества</a>
+        <a class="header__link" href="#contacts">Контакты</a>
     </nav>
 </header>
 
@@ -59,7 +59,7 @@
                     <p class="intro__grid-item-text">Доставляем и<br>собираем</p>
                 </div>
             </div>
-            <a href="#" class="intro__button-link">
+            <a href="#estimate" class="intro__button-link">
                 <button class="intro__pulse-button">Получить консультацию 
                     <img class="intro__pulse-button-img" src="assets/img/arrow.svg" alt="->">
                 </button>
@@ -95,7 +95,9 @@
             <form class="intro__form" action="url">
                 <input class="intro__form-input" type="text" placeholder="Ваше имя">
                 <input class="intro__form-input" type="text" placeholder="Номер телефона">
-                <div class="intro__form-button default-button">Консультация</div>
+                <a href="#estimate">
+                    <div class="intro__form-button default-button">Консультация</div>
+                </a>
             </form>
         </div>
     </div>
@@ -103,7 +105,7 @@
 
 <!-- QUALITY -->
 
-<section class="quality">
+<section class="quality" id="quality">
     <div class="quality__content container">
         <div class="quality__content-text">
             <h2 class="quality__content-title">Формула качества компании <span>КУХНИ МИКС</span></h2>
@@ -121,7 +123,8 @@
             </div>
             <div class="quality__side-content-wrapper">
                 <p class="quality__side-content-text"><span>без</span>%</p>
-                <p class="quality__side-content-sub-text">Рассрочка</p>
+                <p class="quality__side-content-sub-text">Рассрочка<br>
+                    без %</p>
             </div>
             
         </div>
@@ -161,7 +164,7 @@
                 </div>
                 <p class="quality__content-grid-item-text">Наши специалисты спроектируют кухню под ваши нужды, создадут 3D дизайн-проект бесплатно</p>
             </div>
-            <a class="quality__content-grid-item quality__content-grid-item--last" href="#">
+            <a class="quality__content-grid-item quality__content-grid-item--last" href="#estimate">
                 <img src="assets/img/arrow-red.svg" alt="->" class="quality__content-grid-last-item-arrow">
                 <p class="quality__content-grid-last-item-text">Рассчитать стоимость<br>кухни</p>
             </a>
@@ -171,7 +174,7 @@
 
 <!-- QUALITY-SLIDER -->
 
-<section class="quality-slider">
+<section class="quality-slider" id="quality-slider">
     <div class="container">
         <div class="quality-slider__wrapper">
             <h2 class="quality-slider__title default-title"><span>Секрет качества</span> изделей КУХНИ МИКС</h2>
@@ -249,12 +252,12 @@
 
 <!-- GUARANTEE -->
 
-<section class="guarantee">
+<section class="guarantee" id="guarantee">
     <div class="guarantee__wrapper container">
         <h2 class="guarantee__title default-title">Теперь <span>вы знаете наш подход</span> к работе</h2> 
         <p class="guarantee__sub-title default-sub-title">и отношение к качеству производства</p>
         <div class="guarantee-content">
-            <p class="guarantee-content-text">Поэтому мы даем вам гарантию и сервисное обслуживание до 10 лет</p>'
+            <p class="guarantee-content-text">Поэтому мы даем вам гарантию и сервисное обслуживание до 10 лет</p>
             <div class="guarantee-content-period">10</div>
         </div>
         <img class="guarantee__decor-img" src="assets/img/guarantee-decor.png" alt="img" >
@@ -270,7 +273,7 @@
         <div class="variants__slider-range">
             <div class="variants__slider-range-wrapper">
                 <div class="variants__slider-range-progress"></div>
-                <input class="variants__slider-input" type="range" min="50" max="300" step="50" value="50">
+                <input class="variants__slider-input" type="range" min="0" max="100" step="20" value="0" oninput="progress()">
             </div>
             <div class="variants__slider-input-list">
                 <p class="variants__slider-input-price">50 000 ₽</p>
@@ -287,7 +290,9 @@
                 <div class="variants__slider-item-content">
                     <h4 class="variants__slider-item-content-title">Кухня с фасадами "AGT"</h4>
                     <p class="variants__slider-item-content-text">Максимально стильный и надежный кухонный гарнитур “AGT” с большим набором дополнительных возможностей хранения</p>
-                    <button class="variants__slider-item-content-butoon default-button">Рассчитать стоимость</button>
+                    <a class="variants__slider-item-content-button-link" href="#estimate">
+                        <button class="variants__slider-item-content-button default-button">Рассчитать стоимость</button>
+                    </a>
                 </div>
             </div>
             <div class="variants__slider-item">
@@ -295,7 +300,9 @@
                 <div class="variants__slider-item-content">
                     <h4 class="variants__slider-item-content-title">Кухня в стиле "хай-тек"</h4>
                     <p class="variants__slider-item-content-text">Максимально стильный и надежный кухонный гарнитур “AGT” с большим набором дополнительных возможностей хранения</p>
-                    <button class="variants__slider-item-content-butoon default-button">Рассчитать стоимость</button>
+                    <a class="variants__slider-item-content-button-link"  href="#estimate">
+                        <button class="variants__slider-item-content-button default-button">Рассчитать стоимость</button>
+                    </a>
                 </div>
             </div>
             <div class="variants__slider-item">
@@ -303,7 +310,9 @@
                 <div class="variants__slider-item-content">
                     <h4 class="variants__slider-item-content-title">Кухня "Эмаль"</h4>
                     <p class="variants__slider-item-content-text">Максимально стильный и надежный кухонный гарнитур “AGT” с большим набором дополнительных возможностей хранения</p>
-                    <button class="variants__slider-item-content-butoon default-button">Рассчитать стоимость</button>
+                    <a class="variants__slider-item-content-button-link" href="#estimate">
+                        <button class="variants__slider-item-content-button default-button">Рассчитать стоимость</button>
+                    </a>
                 </div>
             </div>
             <div class="variants__slider-item">
@@ -311,7 +320,9 @@
                 <div class="variants__slider-item-content">
                     <h4 class="variants__slider-item-content-title">Кухня «Прованс 1»</h4>
                     <p class="variants__slider-item-content-text">Максимально стильный и надежный кухонный гарнитур “AGT” с большим набором дополнительных возможностей хранения</p>
-                    <button class="variants__slider-item-content-butoon default-button">Рассчитать стоимость</button>
+                    <a class="variants__slider-item-content-button-link" href="#estimate">
+                        <button class="variants__slider-item-content-button default-button">Рассчитать стоимость</button>
+                    </a>
                 </div>
             </div> 
         </div>
@@ -350,7 +361,7 @@
 
 <!-- ESTIMATE -->
 
-<section class="estimate decor">
+<section class="estimate decor" id="estimate">
     <div class="estimate__content">
         <div class="estimate__wrapper">
             <h2 class="estimate__title">Составление сметы-<br><span>ответстенный процесс</span></h2>
@@ -374,7 +385,7 @@
 
 <!-- CONTACTS -->
 
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="contacts__content">
         <h2 class="contacts__title">Контакты</h2>
         <ol class="contacts__list">
@@ -426,10 +437,10 @@
                 <img class="footer__content-logo-img" src="assets/img/logo-1.png" alt="logo">
             </div>
             <nav class="footer-nav">
-                <a class="footer-nav-item" href="#">О нас</a>
-                <a class="footer-nav-item" href="#">Гарантии</a>
-                <a class="footer-nav-item" href="#">Преимущества</a>
-                <a class="footer-nav-item" href="#">Контакты</a>
+                <a class="footer-nav-item" href=#quality">О нас</a>
+                <a class="footer-nav-item" href=#guarantee">Гарантии</a>
+                <a class="footer-nav-item" href=#quality-slider">Преимущества</a>
+                <a class="footer-nav-item" href=#contacts">Контакты</a>
             </nav>
         </div>
         <div class="footer__content-right">
@@ -437,7 +448,9 @@
                 <img class="footer__content-phone-img" src="assets/img/footer-phone.svg" alt="phone" >
                 <p class="footer__content-phone-text">8 (3466) 68-20-15</p>
             </a>
-            <button class="footer__content-right-button default-button">Консультация</button>
+            <a href="#estimate">
+                <button class="footer__content-right-button default-button">Консультация</button>
+            </a>
         </div>
     </div>
 </footer>

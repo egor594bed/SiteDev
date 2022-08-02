@@ -93,6 +93,7 @@ $window-width-min-px: $window-width-min + px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     
 }
 
@@ -127,6 +128,7 @@ $window-width-min-px: $window-width-min + px;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
+    text-align: center;
     color: #FFFFFF;
 }
 
@@ -751,6 +753,7 @@ $window-width-min-px: $window-width-min + px;
 }
 
 .quality-slider__slider-img {
+    width: 100%;
     margin-right: 20px;
     transition: opacity .3s;
 
@@ -799,6 +802,12 @@ $window-width-min-px: $window-width-min + px;
     color: #FFFFFF;
     opacity: 0.8;
     transition: opacity .3s;
+}
+
+@media screen and (max-width: 1660px) {
+    .quality-slider__slider-right-text {
+        min-height: 232px;
+    }
 }
 
 .quality-slider__slider-nav {
@@ -951,15 +960,13 @@ $window-width-min-px: $window-width-min + px;
 .variants__slider-range-progress {
     // width: 45/1440*100%;
     width: 20px;
-    height: 30px;
+    height: 5px;
     background-color: #DF4646;
     border: 0 solid transparent;
-    border-radius: 5px 0 0 5px;
-    position: absolute;
+    position: relative;
     z-index: 5;
     left: 0;
-    top: 11px; 
-    // ОТЛОВИТЬ ПОЗИЦИЮ ТУМБЛЕРА В JS И ПРИВЯЗАТЬ СЮДА В ШИРИНУ
+    top: 16px; 
 }
 
 .variants__slider-input {
@@ -1024,8 +1031,8 @@ $window-width-min-px: $window-width-min + px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    @include fsize(18, 14);
-    line-height: 22px;
+    @include fsize(18, 13);
+    line-height: 120%;
     text-align: center;
     color: #FFFFFF;
     opacity: 0.3;
@@ -1079,7 +1086,7 @@ $window-width-min-px: $window-width-min + px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    @include fsize(18, 15);
     line-height: 120%;
     color: #21222B;
 }
@@ -1095,7 +1102,12 @@ $window-width-min-px: $window-width-min + px;
     opacity: 0.8;
 }
  
-.variants__slider-item-content-butoon {
+.variants__slider-item-content-button-link {
+    display: flex;
+    justify-content: center;
+}
+
+.variants__slider-item-content-button {
     padding: 13px 59px;
     background-color: rgba(223, 70, 70, 0.2);
     color: rgba(223, 70, 70, 1);
@@ -1125,7 +1137,7 @@ $window-width-min-px: $window-width-min + px;
 .examples__buttons {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .examples__button {
@@ -1140,6 +1152,7 @@ $window-width-min-px: $window-width-min + px;
 
 .examples__button-label {
     margin-right: 12px;
+    margin-bottom: 10px;
     padding: 14px 20px;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
