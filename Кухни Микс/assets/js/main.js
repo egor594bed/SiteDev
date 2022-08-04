@@ -1,5 +1,4 @@
-
-// SLIDER
+//SLIDER
 
 const subSlideTitle = ["Отдел конструкции", "Распиловочный цех", "Кромочный цех", "Присадочный цех", "Фасадный цех", "Фрезировочный цех", "Цех с прессом", "Покрасочный цех", "ОТК", "Упаковочный цех"];
 const subSlideText = ["На этом этапе конструкторы по документам от дизайнера подготавливають все необходимое для создания кухни следующими отделами.", "На станках обрабатываем листовые материалы. Здесь мы создаем аккуратные детали точных размеров.", "В этом цеху детали обрабатываются кромками. Автоматические станки с точно настроенной электронной системой обрезают свесы кромки и полируют стыки материала с кромкой.", "Здесь оператор делает разные отверстия для фурнитуры и крепежей на станке высокой точности с числовым программным управлением (ЧПУ).", "Цех с пятью подразделениями, которые собирает из заготовок заказанную конструкцию.", "Станок с числовым программным упрвалением (ЧПУ) наносит на детали простые, экскизные, сложные и 3Д фрезеровки.", "Мембранно-вакуумным прессом облицовываем плоские и неплоские поверхности шпоном и плёнками ПВХ.", "Окрашиваем детали итальянской эмаалью разными способами покраски, тонируем изделия, патинируем поверхности и покрываем лаками.", "Проверяем каждую деталь с каждого цеха на соответствие установленным в ТЗ требованиям. Все несоответствия отправляют на доработку.", "Упаковочные мебельные станки качественно упаковывают готовые изделия, чтобы все детали доехали до вашего дома в целости и сохранности."];
@@ -86,6 +85,8 @@ function swipe (oldClass, newClass) {
 
         sliderCounterClass.textContent = `0${Number(sliderCounter) + 1}`;
 
+        subSliderPosition();
+
         if (sliderCounterClass.textContent == "010") {
             sliderCounterClass.textContent = "10";
         }
@@ -93,13 +94,24 @@ function swipe (oldClass, newClass) {
 
     else {
         subSliderWormPosition = subSliderWormPosition - 142;
-        subSliderWorm.style = `left: ${subSliderWormPosition}px`
+        subSliderWorm.style = `left: ${subSliderWormPosition}px`;
 
         sliderCounterClass.textContent = `0${Number(sliderCounter) - 1}`;
+
+        subSliderPosition();
     }
     
     oldClass.classList.remove("quality-slider__sub-slide--active");
     newClass.classList.add("quality-slider__sub-slide--active");
+}
+
+function subSliderPosition () {
+    let endWormPosition = subSliderWormPosition + 142;
+    let subSliderWrapperWidth =  document.querySelector(".quality-slider__sub-slider-wrapper").offsetWidth;
+
+    if (endWormPosition > subSliderWrapperWidth) {
+        subSlider.style = `left: ${subSliderWrapperWidth - endWormPosition}px`;
+    }
 }
 
 function newSlide (image, stage, title, text) {

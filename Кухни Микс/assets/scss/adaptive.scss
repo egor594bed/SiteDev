@@ -206,7 +206,7 @@
     }
 
     .container {
-        padding: 0 calc(10px + (30 - 10) * ((100vw - 365px) / (768 - 365)));
+        padding: 0 calc(10px + (60 - 10) * ((100vw - 365px) / (768 - 365)));
     }
 
     .logo {
@@ -365,24 +365,23 @@
     }
 
     .guarantee-content-text {
+        padding-left: calc(10px + (60 - 10) * ((100vw - 365px) / (768 - 365)));
         max-width: 100%;
         align-self: flex-start;
     }
 
     .guarantee-content {
-        margin-top: 28px;
+        margin: 28px calc(-10px - (60 - 10) * ((100vw - 365px) / (768 - 365))) 0;
         flex-direction: column;
-    }
+        background: url("../img/guarantee-bg-3.jpg") top no-repeat;
+        background-size: cover;
+        padding-bottom: calc(332px + (712 - 332) * ((100vw - 365px) / (768 - 365)));
+        
+    } 
 
     .guarantee-content-period {
         font-size: 290px;
 
-    }
-
-    .guarantee-content {
-        background: url("../img/guarantee-bg-3.jpg") top no-repeat;
-        background-size: cover;
-        padding-bottom: 332px;
     }
 
     .variants__slider-input-price {
@@ -443,7 +442,6 @@
  
 } 
  
-
 @media only screen and (max-width: 480px) {
     .guarantee-content-period {
         font-size: 220px;

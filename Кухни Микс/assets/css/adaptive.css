@@ -227,7 +227,7 @@
 }
 @media only screen and (max-width: 768px) {
   .container {
-    padding: 0 calc(10px + 20 * (100vw - 365px) / 403);
+    padding: 0 calc(10px + 50 * (100vw - 365px) / 403);
   }
 
   .logo {
@@ -395,27 +395,25 @@
   }
 
   .guarantee-content-text {
+    padding-left: calc(10px + 50 * (100vw - 365px) / 403);
     max-width: 100%;
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
 
   .guarantee-content {
-    margin-top: 28px;
+    margin: 28px calc(-10px - 50 * (100vw - 365px) / 403) 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background: url("../img/guarantee-bg-3.jpg") top no-repeat;
+    background-size: cover;
+    padding-bottom: calc(332px + 380 * (100vw - 365px) / 403);
   }
 
   .guarantee-content-period {
     font-size: 290px;
-  }
-
-  .guarantee-content {
-    background: url("../img/guarantee-bg-3.jpg") top no-repeat;
-    background-size: cover;
-    padding-bottom: 332px;
   }
 
   .variants__slider-input-price {
