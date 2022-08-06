@@ -449,6 +449,12 @@ $window-width-min-px: $window-width-min + px;
     border: 0 solid transparent;
     border-radius: 8px;
     background-color: #21222B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: white;
 
     &::placeholder {
     font-family: 'Montserrat';
@@ -1302,7 +1308,11 @@ $window-width-min-px: $window-width-min + px;
     font-weight: 400;
     font-size: 14px;
     line-height: 120%;
-    color: #949494;
+    color: black;
+
+    &::placeholder {
+        color: #949494;
+    }
 }
 
 .estimate__form-button {

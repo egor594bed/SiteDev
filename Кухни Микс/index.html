@@ -19,10 +19,14 @@
 
 <header class="header container">
     <div class="header__content">
-        <img class="logo" src="assets/img/logo-1.png" alt="logo">
+        <a href="index.html">
+            <img class="logo" src="assets/img/logo-1.png" alt="logo">
+        </a>
         <div class="header__content-right">
             <div class="header__phone"><a href="tel:83466682015" class="header__phone-link">8 (3466) 68-20-15</a></div>
-            <button class="header__button default-button">Консультация</button>
+            <a href="#consultation">
+                <button class="header__button default-button">Консультация</button>
+            </a>
         </div>
     </div>
     <nav class="header__nav">
@@ -59,14 +63,14 @@
                     <p class="intro__grid-item-text">Доставляем и<br>собираем</p>
                 </div>
             </div>
-            <a href="#estimate" class="intro__button-link">
+            <a href="#consultation" class="intro__button-link">
                 <button class="intro__pulse-button">Получить консультацию 
                     <img class="intro__pulse-button-img" src="assets/img/arrow.svg" alt="->">
                 </button>
             </a>
         </div>
     </div>
-    <div class="intro-bottom">
+    <div class="intro-bottom" id="consultation">
         <img class="intro__decor-img2" src="assets/img/intro-decor2.png" alt="decor">
         <div class="intro__info">
             <h4 class="intro__info-title">Хотите кухню на которой будет удобно готовить<br><span>И каждая мелочь будет на своем месте?</span></h4>
@@ -92,12 +96,10 @@
                     </div>
                 </li>
             </ul>
-            <form class="intro__form" action="url">
-                <input class="intro__form-input" type="text" placeholder="Ваше имя">
-                <input class="intro__form-input" type="text" placeholder="Номер телефона">
-                <a href="#estimate">
-                    <div class="intro__form-button default-button">Консультация</div>
-                </a>
+            <form class="intro__form" action="#">
+                <input class="intro__form-input" type="text" placeholder="Ваше имя" required>
+                <input class="intro__form-input" type="tel" placeholder="Номер телефона" required>
+                <button class="intro__form-button default-button" type="submit">Консультация</button>
             </form>
         </div>
     </div>
@@ -370,10 +372,10 @@
             <img class="estimate__linage-img" src="assets/img/linage.png" alt="img">
             <p class="estimate__text">Заполните форму на бесплатный выезд мастера. Наш специалист <span>поможет правильно составить  смету и рассчитать стоимость</span></p>
             <form class="estimate__form" action="#">
-                <input class="estimate__form-input" type="text" placeholder="Ваше имя">
-                <input class="estimate__form-input" type="text" placeholder="+7(_ _ _) _ _ _-_ _-_ _">
-                <input class="estimate__form-input" type="text" placeholder="Ваш email">
-                <button class="estimate__form-button default-button">Заказать выезд мастера</button>
+                <input class="estimate__form-input" type="text" placeholder="Ваше имя" required>
+                <input class="estimate__form-input" type="tel" placeholder="+7(_ _ _) _ _ _-_ _-_ _" required>
+                <input class="estimate__form-input" type="email" placeholder="Ваш email" required>
+                <button class="estimate__form-button default-button" type="submit">Заказать выезд мастера</button>
             </form>
         </div>
     </div>
@@ -425,7 +427,8 @@
             </a>
         </div>
     </div>
-    <img class="contacts__map" src="assets/img/contacts-map.jpg" alt="map">
+    <div class="contacts__map" alt="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2842d5627d02fd29ed6c1ccb73576d4456660dcfcdc0ba9d802cbb41d1d4c383&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script></div>
 </section>
 
 <!-- FOOTER -->
@@ -434,7 +437,9 @@
     <div class="footer__content container-test">
         <div class="footer__content-wrapper">
             <div class="footer__content-logo">
-                <img class="footer__content-logo-img" src="assets/img/logo-1.png" alt="logo">
+                <a href="index.html">
+                    <img class="footer__content-logo-img" src="assets/img/logo-1.png" alt="logo">
+                </a>
             </div>
             <nav class="footer-nav">
                 <a class="footer-nav-item" href=#quality">О нас</a>
@@ -448,7 +453,7 @@
                 <img class="footer__content-phone-img" src="assets/img/footer-phone.svg" alt="phone" >
                 <p class="footer__content-phone-text">8 (3466) 68-20-15</p>
             </a>
-            <a href="#estimate">
+            <a href="#consultation">
                 <button class="footer__content-right-button default-button">Консультация</button>
             </a>
         </div>
