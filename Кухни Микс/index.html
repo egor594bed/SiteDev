@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="//api-maps.yandex.ru">
+	<link rel="dns-prefetch" href="//api-maps.yandex.ru">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -228,7 +230,20 @@
             </div>
         </div>
         <div class="quality-slider__slider">
-            <img class="quality-slider__slider-img" src="assets/img/quality-slider-img1.png" alt="img" >
+            <div class="quality-slider__slider-wrapper">
+                <img class="quality-slider__slider-img quality-slider__slider-img--active" id="slide-01" src="assets/img/quality-slider-img1.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-02" src="assets/img/quality-slider-img2.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-03" src="assets/img/quality-slider-img3.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-04" src="assets/img/quality-slider-img4.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-05" src="assets/img/quality-slider-img5.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-06" src="assets/img/quality-slider-img6.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-07" src="assets/img/quality-slider-img7.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-08" src="assets/img/quality-slider-img8.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-09" src="assets/img/quality-slider-img9.png" alt="img">
+                <img class="quality-slider__slider-img" id="slide-10" src="assets/img/quality-slider-img10.png" alt="img">
+                
+            </div>
+            
             <div class="quality-slider__slider-right">
                 <div class="quality-slider__slider-right-description">
                     <div class="quality-slider__slider-right-stage">Этап 1</div>
@@ -427,8 +442,7 @@
             </a>
         </div>
     </div>
-    <div class="contacts__map" alt="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2842d5627d02fd29ed6c1ccb73576d4456660dcfcdc0ba9d802cbb41d1d4c383&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script></div>
+    <div class="contacts__map" id="yamap"></div>
 </section>
 
 <!-- FOOTER -->
@@ -461,7 +475,17 @@
 </footer>
 
 
+<script>
 
-<script src="assets/js/main.js"></script>
+setTimeout(() => {                    
+    let script = document.createElement('script');
+    script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2842d5627d02fd29ed6c1ccb73576d4456660dcfcdc0ba9d802cbb41d1d4c383&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true";
+    document.getElementById('yamap').appendChild(script);                        
+}, 1000)
+
+</script>
+
+<script src="assets/js/main-dist.js"></script>
+
 </body>
 </html>

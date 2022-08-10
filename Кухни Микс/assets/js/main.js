@@ -68,27 +68,38 @@ sliderButtons.forEach( btn => {
 
 
 function swipe (oldClass, newClass) {
+    console.log(oldClass)
     let sliderCounter = sliderCounterClass.textContent;
+    let counter;
+
+    oldClass.classList.remove("quality-slider__sub-slide--active");
+    newClass.classList.add("quality-slider__sub-slide--active");
 
     const slide = new Slide({
-        image: newClass.id.slice(10),
         stage: `Этап ${newClass.id.slice(10)}`,
         title: subSlideTitle[Number(newClass.id.slice(10)) - 1],
         text: subSlideText[Number(newClass.id.slice(10)) - 1],
     })
-
-    newSlide (slide.imagePath, slide.stageValue, slide.titleValue, slide.textValue)
 
     if (Number(oldClass.id.slice(10)) < Number(newClass.id.slice(10))) {
         subSliderWormPosition = subSliderWormPosition + 142;
         subSliderWorm.style = `left: ${subSliderWormPosition}px`
 
         sliderCounterClass.textContent = `0${Number(sliderCounter) + 1}`;
-
-        subSliderPosition();
+        counter = `0${Number(sliderCounter) + 1}`;
+        
 
         if (sliderCounterClass.textContent == "010") {
             sliderCounterClass.textContent = "10";
+            counter = `10`;
+            newSlide (counter, slide.stageValue, slide.titleValue, slide.textValue)
+        }
+
+        else {
+
+            newSlide (counter, slide.stageValue, slide.titleValue, slide.textValue)
+
+            subSliderPosition();
         }
     }
 
@@ -97,12 +108,12 @@ function swipe (oldClass, newClass) {
         subSliderWorm.style = `left: ${subSliderWormPosition}px`;
 
         sliderCounterClass.textContent = `0${Number(sliderCounter) - 1}`;
+        counter = `0${Number(sliderCounter) - 1}`;
+        newSlide (counter, slide.stageValue, slide.titleValue, slide.textValue)
 
         subSliderPosition();
     }
-    
-    oldClass.classList.remove("quality-slider__sub-slide--active");
-    newClass.classList.add("quality-slider__sub-slide--active");
+
 }
 
 function subSliderPosition () {
@@ -114,20 +125,28 @@ function subSliderPosition () {
     }
 }
 
-function newSlide (image, stage, title, text) {
-    document.querySelector(".quality-slider__slider-img").style = "opacity: 0"
+function newSlide (counter, stage, title, text) {
+    let activeSlide = document.querySelector(".quality-slider__slider-img--active");
+
+    activeSlide.classList.remove("quality-slider__slider-img--active");
+    document.getElementById(`slide-${counter}`).classList.add("quality-slider__slider-img--toggle");
     document.querySelector(".quality-slider__slider-right-stage").style = "opacity: 0"
     document.querySelector(".quality-slider__slider-right-title").style = "opacity: 0"
     document.querySelector(".quality-slider__slider-right-text").style = "opacity: 0"
+    console.log(counter)
+
     setTimeout (function () {
-        document.querySelector(".quality-slider__slider-img").style = "";
-        document.querySelector(".quality-slider__slider-right-stage").style = "";
-        document.querySelector(".quality-slider__slider-right-title").style = "";
-        document.querySelector(".quality-slider__slider-right-text").style = "";
-        document.querySelector(".quality-slider__slider-img").src = image;
+        document.querySelector(".quality-slider__slider-img--toggle").classList.remove("quality-slider__slider-img--toggle");
+        activeSlide.classList.remove("quality-slider__slider-img--active")
+        document.getElementById(`slide-${counter}`).classList.add("quality-slider__slider-img--active");
+        console.log(document.getElementById(`slide-${counter}`))
         document.querySelector(".quality-slider__slider-right-stage").textContent = stage;
         document.querySelector(".quality-slider__slider-right-title").textContent = title;
         document.querySelector(".quality-slider__slider-right-text").textContent = text;
+        document.querySelector(".quality-slider__slider-right-stage").style = "";
+        document.querySelector(".quality-slider__slider-right-title").style = "";
+        document.querySelector(".quality-slider__slider-right-text").style = "";
+
     }, 300)
 
 }
@@ -143,20 +162,14 @@ function removeDisabled (button) {
 class Slide {
 
     constructor(props) {
-        this.image = props.image;
         this.stage = props.stage;
         this.title = props.title;
         this.text = props.text;
     }
 
-    imagePath = "";
     stageValue = "";
     titleValue = "";
     textValue = "";
-
-    set image(slideImage) {
-        this.imagePath = `assets/img/quality-slider-img${slideImage}.png`
-    }
 
     set stage(stageValue) {
         this.stageValue = stageValue;

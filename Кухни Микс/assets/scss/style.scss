@@ -5,7 +5,7 @@ body {
     font-weight: 300;
     
     background-color: #21222B;
-    overflow-y: scroll;
+    overflow-x: hidden;
 }   
 
 h1,h2,h3,h4,h5,h6,p {
@@ -758,11 +758,28 @@ $window-width-min-px: $window-width-min + px;
 
 }
 
-.quality-slider__slider-img {
-    width: 832/1440*100%;
+.quality-slider__slider-wrapper {
+    min-width: 832/1440*100%;
     margin-right: 20px;
-    transition: opacity .3s;
+}
 
+.quality-slider__slider-img {
+    width: 100%;
+    opacity: 0;
+    display: none;
+    transition: opacity .3s;
+}
+
+.quality-slider__slider-img.quality-slider__slider-img--toggle {
+    opacity: 0;
+    display: block;
+    transition: opacity .3s;
+}
+
+.quality-slider__slider-img.quality-slider__slider-img--active{
+    opacity: 1;
+    display: block;
+    transition: opacity .3s;
 }
 
 .quality-slider__slider-right {
