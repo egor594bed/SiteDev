@@ -527,6 +527,7 @@ $window-width-min-px: $window-width-min + px;
     align-items: center;
     justify-content: center;
     align-self: flex-end;
+    user-select: none;
 }
 
 .intro__button-scroll {
@@ -550,6 +551,15 @@ $window-width-min-px: $window-width-min + px;
     background-size: cover;
     position: relative;
     overflow: hidden;
+    opacity: 1;
+
+    transition: height 1s, opacity 1s, padding-top 1s, padding-bottom 1s;
+}
+
+.intro-about--collapse {
+    padding: 0;
+    height: 0;
+    opacity: 0;
 }
 
 .intro-about-content {
