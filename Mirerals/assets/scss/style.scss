@@ -421,6 +421,10 @@ $window-width-min-px: $window-width-min + px;
 
 // INTRO
 
+.view-wrapper {
+    overflow: hidden;
+}
+
 .intro {
     height: 100vh;
     padding-top: 40vh;

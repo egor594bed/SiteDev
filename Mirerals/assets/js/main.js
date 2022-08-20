@@ -23,17 +23,33 @@ setTimeout(function () {
 const intro = document.querySelector(".intro"),
       introAbout = document.querySelector(".intro-about"),
       introAboutDecor = document.querySelector(".intro-about__decor"),
-      allLinks = document.querySelectorAll("a[href^='#'");
+      allLinks = document.querySelectorAll("a[href^='#'"),
+      viewWrapper = document.querySelector(".view-wrapper");
       
 
 // const none = document.querySelectorAll(".none");
 
 // MAIN DECOR
+
 document.addEventListener("scroll", function (e) {
+
     if ((introAbout.offsetTop * 0.2) < window.pageYOffset) {
         introAboutDecor.classList.remove("intro-about__decor--start");
     }
 
+    // else if (e.originalEvent.deltaY > 0) {
+    //     console.log(window.pageYOffset)
+    //     // e.preventDefault();
+    //     let scrollPosition = intro.getBoundingClientRect().top + intro.offsetHeight;
+    //     // console.log(scrollPosition)
+    //     console.log(intro.getBoundingClientRect().top)
+    //     console.log(intro.offsetHeight)
+    //     window.scrollBy({
+    //         top: scrollPosition,
+    //         behavior: 'smooth'
+    //     });
+    // }
+ 
 });
 
 
@@ -55,6 +71,16 @@ allLinks.forEach(link => {
 
 document.querySelector(".intro-about__button-scroll").addEventListener("click", function (e) {
     introAbout.classList.add("intro-about--collapse");
+    setTimeout(function() {
+        window.scrollBy({
+            top: 0
+        });
+        setTimeout(function() {
+            viewWrapper.style = "height: 100%; margin-top: -100vh"
+        }, 1000)
+        
+    }, 1001);
+    
 });
 
 $(document).ready(function(){
