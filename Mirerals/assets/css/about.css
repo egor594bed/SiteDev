@@ -1,0 +1,104 @@
+.about-intro__top {
+  background-color: #233554;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.about-into__top-text-content {
+  padding-left: calc(15px + 355 * (100vw - 1200px) / 720);
+  padding-top: 108px;
+  padding-right: 50px;
+  padding-bottom: 88px;
+}
+
+.about-into__top-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.about-into__top-text {
+  max-width: 520px;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+.about-intro__top-logo-area {
+  padding-right: calc(15px + 355 * (100vw - 1200px) / 720);
+  background: url("../img/about/about-bg.jpg") center no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-intro__top-button {
+  position: absolute;
+  bottom: 0;
+  right: 8.8020833333%;
+}
+
+.request-button {
+  width: 150px;
+  height: 150px;
+  padding: 50px 30px;
+  background-color: #2855A1;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.about-intro__bottom {
+  margin-top: 50px !important;
+  margin-bottom: 100px !important;
+}
+
+.about-intro__bottom-wrapper {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-intro__bottom-text-content + .about-intro__bottom-text-content {
+  margin-left: 30px;
+}
+
+.about-intro__bottom-text {
+  max-width: 570px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #444A58;
+}
+
+.about-intro__bottom-text + .about-intro__bottom-text {
+  margin-top: 30px;
+}
+
+.about-intro__bottom-text.about-intro__bottom-text--full-width {
+  max-width: 100%;
+}

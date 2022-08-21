@@ -133,7 +133,7 @@ $(document).ready(function(){
 
     }}));
 
-    $(".main-news-slider").slick ({
+    $(".main-news__slider").slick ({
         dots: false,
         appendArrows: $(".main-news__top-nav"),
         prevArrow: mainNewsArrowPrev,
